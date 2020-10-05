@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <title>Weather Page</title>
+    <head>
+        <link rel="stylesheet" href="/css/styles.css"> 
+        <link rel="icon" href="/img/cloud.png">
+    </head>
+    <body>
+        <form>
+         {{>header}}
+                <input placeholder="Enter the location...">
+                <button>Search</button>
+                <h2 class='infoText'>
+                    
+                        Once you click on Search, weather information will be displayed here...
+            
+                </h2>   
+         {{>footer}}
+         </form>
+         <script src='/js/helper.js'></script>
+    </body>
+</html>
