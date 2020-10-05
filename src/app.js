@@ -23,6 +23,19 @@ app.get('', (request,response) => {
     })
 })
 
+app.get('/weather', (request,response) => {
+    response.render('index',{
+        title:"Weather"
+    })
+})
+
+app.get('/about', (request,response) => {
+    response.render('about',{
+        name: "Prashant Kumar",
+        hobby : "reading"
+    })
+})
+
 app.get('/api/weather', (request,response) => {
     const location = request.query.loc
     if(!location){
