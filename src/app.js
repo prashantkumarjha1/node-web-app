@@ -6,7 +6,7 @@ const weatherDetails = require('../public/utils/weatherDetails')
 const request = require('request')
 
 const app = express()
-
+const port = process.env.PORT || 3000
 app.use (express.static(path.join(__dirname,'../public')))
 
 app.set('view engine','hbs')
@@ -64,7 +64,7 @@ app.get('/*', (req,resp) => {
     resp.render('error', {errormsg : 'URL is not supported'})
 })
 
-app.listen(3000,()=>{
-    console.log('Starting server')
+app.listen(port,()=>{
+    console.log('Starting server on port: ' + port)
 })
 
